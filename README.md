@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Foundation Compass Template
 
 The easiest way to get started with Foundation + Compass.
@@ -27,3 +28,7 @@ If you'd like to upgrade to a newer version of Foundation down the road just run
 ```bash
 bower update
 ```
+=======
+# Go-Somewhere
+Javascript App that finds events near your using the event brite api
+>>>>>>> 28193c42d949085f6767ed7b04cbbaf17e642c16
