@@ -1,6 +1,6 @@
 @import "settings";
+@import "compass";
 @import "foundation";
-
 // Or selectively include components
 // @import
 //   "foundation/components/accordion",
@@ -38,3 +38,121 @@
 //   "foundation/components/type",
 //   "foundation/components/offcanvas",
 //   "foundation/components/visibility";
+#map-canvas {
+    height: 20em;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.loading {
+    background-color: transparent;
+    border: dashed 2rem #D0CE03;
+    box-shadow: 0px 0px 0px 0px #aaa;
+    -webkit-animation: loader-spin;
+    animation-name: loader-spin;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+}
+
+@-webkit-keyframes loader-spin {
+    from {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+$circle-radius: 50%;
+.circle {
+    border-radius: $circle-radius;
+    height: 12rem;
+    width: 12rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    z-index: 1;
+    box-shadow:3px 3px 3px 1px rgba(0, 0, 0, 0.35);
+}
+
+.move-up {
+    -webkit-transform: translate3d(0, -175%, 0) scale(.5);
+    transform: translate3d(0, -175%, 0) scale(.5);
+    transition: all 1.5s ease-in-out;
+    -webkit-transition: all 1.5s ease-in-out;
+    /** Chrome & Safari **/
+    
+    -moz-transition: all 1.5s ease-in-out;
+    /** Firefox **/
+    
+    -o-transition: all 1.5s ease-in-out;
+}
+
+.vertcenter {
+    height: 100%;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.vertcenter:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -0.25em;
+}
+
+.centered {
+    display: inline-block;
+    vertical-align: middle;
+    width: 300px;
+}
+
+body {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-attachment: fixed;
+    @include background-image(linear-gradient(to bottom right, #F45C43, #EB3349));
+}
+.container {
+    display: none;
+    position: absolute;
+    margin: auto;
+    top: 10%;
+    left: 0;
+    right: 0;   
+    padding: 4rem 5rem 4rem 5rem;
+    margin-bottom: 4rem;
+    background-color: $white;
+    box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.35);
+}
+.location-check {
+    background-color: $white;
+    width: 100%;
+    max-width: 100%;
+}
+@font-face{
+    font-family: 'Proxima Nova Reg';
+    src: url('../fonts/proximanova-reg-webfont.woff') format('woff'),
+        url('../fonts/proximanova-reg-webfont.eot'),
+        url('../fonts/proximanova-reg-webfont.ttf') format('truetype');
+}
+@font-face{
+    font-family: 'Proxima Nova Light';
+    src: url('../fonts/proximanova-light-webfont.woff') format('woff'),
+        url('../fonts/proximanova-light-webfont.eot'),
+        url('../fonts/proximanova-light-webfont.ttf') format('truetype');
+}
+
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
